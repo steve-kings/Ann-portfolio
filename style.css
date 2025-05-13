@@ -1,4 +1,17 @@
 
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Base animations */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -86,7 +99,7 @@
 .animate-fade-in { animation: fadeIn 1s ease-in; }
 .animate-slide-left { animation: slideInFromLeft 1s ease-out; }
 .animate-slide-right { animation: slideInFromRight 1s ease-out; }
-.animate-slide-up { animation: slideInFromBottom 1s ease-out; }ss
+.animate-slide-up { animation: slideInFromBottom 1s ease-out; }
 .animate-float { animation: floatAnimation 6s ease-in-out infinite; }
 .animate-glow { animation: glowEffect 3s infinite; }
 .animate-bounce-slow { animation: bounce 5s ease-in-out infinite; }
@@ -94,7 +107,6 @@
 .gradient-text {
     background: linear-gradient(90deg, #FF6B8A, #8A4FFF, #00D9C0);
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 200% auto;
     animation: gradientBG 3s ease infinite;
@@ -158,24 +170,26 @@
 }
 
 /* Typewriter effect */
-.typewriter h1 {
-    overflow: hidden;
-    border-right: .15em solid #FF6B8A;
-    white-space: nowrap;
-    margin: 0 auto;
-    animation: 
-        typing 3.5s steps(40, end),
-        blink-caret .75s step-end infinite;
-}
+@media (min-width: 768px) {
+    .typewriter h1 {
+        overflow: hidden;
+        border-right: .15em solid #FF6B8A;
+        white-space: nowrap;
+        margin: 0 auto;
+        animation: 
+            typing 3.5s steps(40, end),
+            blink-caret .75s step-end infinite;
+    }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
 
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #FF6B8A; }
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: #FF6B8A; }
+    }
 }
 
 /* Code snippet styling */
@@ -277,7 +291,7 @@
     transform: scale(1.1);
 }
 
-/* Fixes for mobile */
+/* Mobile responsive fixes */
 @media (max-width: 768px) {
     .typewriter h1 {
         white-space: normal;
@@ -297,9 +311,103 @@
         height: 220px;
     }
     
-
+    /* Ensure footer text is readable on small screens */
     footer .gradient-text {
         font-size: 1rem;
         line-height: 1.5;
+    }
+
+    /* Adjust padding for mobile */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Make buttons more prominent on mobile */
+    .btn-mobile {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Make sure text is readable on mobile */
+    .text-mobile-sm {
+        font-size: 0.9rem;
+    }
+
+    /* Improve spacing on mobile */
+    .mobile-py {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .mobile-my {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Small screen adjustments */
+@media (max-width: 640px) {
+    .portfolio-img {
+        height: 180px;
+    }
+
+    .mobile-xs-text {
+        font-size: 0.8rem;
+    }
+
+    .mobile-section-py {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+/* Ensure the page fits mobile width */
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+/* Make touch targets bigger on mobile */
+@media (max-width: 768px) {
+    button, 
+    a, 
+    input[type="button"], 
+    input[type="submit"] {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    .mobile-menu a {
+        display: block;
+        padding: 12px 15px;
     }
 }

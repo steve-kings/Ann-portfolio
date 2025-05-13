@@ -84,7 +84,7 @@
             particlesJS("particles-js", {
                 "particles": {
                     "number": {
-                        "value": 80,
+                        "value": 60,
                         "density": {
                             "enable": true,
                             "value_area": 800
@@ -187,4 +187,13 @@
                 "retina_detect": true
             });
         }
+        
+        
+        function setVH() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        
+        setVH();
+        window.addEventListener('resize', setVH);
     });
