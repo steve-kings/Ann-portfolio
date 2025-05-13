@@ -8,7 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
     <script>
         tailwind.config = {
             theme: {
@@ -31,29 +31,31 @@
             <span class="text-primary text-xl font-bold">Ann Muthoni</span>
         </div>
         
-        <div class="hidden md:flex space-x-8">
+        <div class="hidden md:flex space-x-6 lg:space-x-8">
             <a href="#home" class="text-gray-600 hover:text-primary font-bold">Home</a>
             <a href="#about" class="text-gray-600 hover:text-primary font-bold">About</a>
             <a href="#what-i-do" class="text-gray-600 hover:text-primary font-bold">Services</a>
+            <a href="#my-work" class="text-gray-600 hover:text-primary font-bold">My Work</a>
             <a href="#portfolio" class="text-gray-600 hover:text-primary font-bold">Portfolio</a>
             <a href="#contact" class="text-gray-600 hover:text-primary font-bold">Contact</a>
         </div>
         
         <div class="md:hidden flex items-center">
-            <button id="menuBtn" class="text-gray-600">
+            <button id="menuBtn" class="text-gray-600 p-2">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
     </div>
     
     <!-- Mobile Menu -->
-    <div id="mobileMenu" class="mobile-menu md:hidden bg-white transition-colors duration-300">
-        <div class="px-4 py-2 space-y-4">
-            <a href="#home" class="block text-gray-600 font-bold">Home</a>
-            <a href="#about" class="block text-gray-600 font-bold">About</a>
-            <a href="#what-i-do" class="block text-gray-600 font-bold">Services</a>
-            <a href="#portfolio" class="block text-gray-600 font-bold">Portfolio</a>
-            <a href="#contact" class="block text-gray-600 font-bold">Contact</a>
+    <div id="mobileMenu" class="mobile-menu md:hidden bg-white transition-colors duration-300 shadow-lg">
+        <div class="px-4 py-4 space-y-4">
+            <a href="#home" class="block text-gray-600 hover:text-primary font-bold py-2">Home</a>
+            <a href="#about" class="block text-gray-600 hover:text-primary font-bold py-2">About</a>
+            <a href="#what-i-do" class="block text-gray-600 hover:text-primary font-bold py-2">Services</a>
+            <a href="#my-work" class="block text-gray-600 hover:text-primary font-bold py-2">My Work</a>
+            <a href="#portfolio" class="block text-gray-600 hover:text-primary font-bold py-2">Portfolio</a>
+            <a href="#contact" class="block text-gray-600 hover:text-primary font-bold py-2">Contact</a>
         </div>
     </div>
 </nav>
@@ -70,26 +72,26 @@
     <div class="relative z-10 container mx-auto px-4 h-full flex flex-col items-center justify-center pt-16">
         <!-- Profile Image with animation -->
         <div class="mb-8 animate-float">
-            <div class="profile-img-container h-64 w-64 md:h-80 md:w-80 animate-glow">
+            <div class="profile-img-container h-48 w-48 md:h-64 md:w-64 lg:h-80 lg:w-80 animate-glow">
                 <img src="images/profile.jpg" class="profile-img h-full w-full object-cover" alt="Ann Muthoni">
             </div>
         </div>
 
         <!-- Text Content with animations -->
         <div class="text-center text-white">
-            <div class="typewriter mb-4 animate-slide-up">
-                <h1 class="text-4xl md:text-6xl font-bold">
+            <div class="mb-4 animate-slide-up">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
                     Hi, I'm <span class="text-pink-300">Ann Muthoni</span>
                 </h1>
             </div>
-            <p class="text-xl md:text-2xl mb-8 animate-slide-up" style="animation-delay: 0.3s;">
+            <p class="text-lg sm:text-xl md:text-2xl mb-8 animate-slide-up" style="animation-delay: 0.3s;">
                 <span id="role-switch" class="font-bold">Mobile Developer</span> 
             </p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center animate-slide-up" style="animation-delay: 0.6s;">
-                <a href="#contact" class="bg-primary hover:bg-pink-600 text-white px-8 py-3 rounded-full transition-colors transform hover:scale-105 duration-300">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style="animation-delay: 0.6s;">
+                <a href="#contact" class="bg-primary hover:bg-pink-600 text-white px-8 py-3 rounded-full transition-colors transform hover:scale-105 duration-300 text-center">
                     Let's Connect
                 </a>
-                <a href="https://drive.google.com/uc?export=download&id=YOUR_FILE_ID" id="downloadCv" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white px-8 py-3 rounded-full transition-all transform hover:scale-105 duration-300">
+                <a href="https://drive.google.com/uc?export=download&id=YOUR_FILE_ID" id="downloadCv" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white px-8 py-3 rounded-full transition-all transform hover:scale-105 duration-300 text-center">
                     <i class="fas fa-download mr-2"></i> Download CV
                 </a>
             </div>
@@ -118,13 +120,13 @@
 <!-- About Section -->
 <section id="about" class="py-16 bg-white transition-colors duration-300">
     <div class="container mx-auto px-4">
-        <h2 class="text-5xl font-bold text-center mb-4 gradient-text">About Me</h2>
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 gradient-text">About Me</h2>
         <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Passionate about creating beautiful, functional mobile experiences with Flutter</p>
         
         <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <!-- Biography Card -->
-            <div class="bg-pink-50 p-8 rounded-xl shadow-lg card-hover transition-all duration-300">
-                <h3 class="text-2xl font-bold text-primary mb-4">Biography</h3>
+            <div class="bg-pink-50 p-6 sm:p-8 rounded-xl shadow-lg card-hover transition-all duration-300">
+                <h3 class="text-xl md:text-2xl font-bold text-primary mb-4">Biography</h3>
                 <p class="text-gray-600 leading-relaxed">
                     I'm a passionate mobile app developer from Ruiru, Kiambu with expertise in building responsive and user-friendly 
                     applications for Android and iOS using Flutter and Dart. At 22 years old, I'm committed to creating efficient and 
@@ -142,15 +144,15 @@
             </div>
 
             <!-- Experience Timeline -->
-            <div class="space-y-8">
+            <div class="space-y-6 md:space-y-8">
                 <!-- Education Card -->
                 <div class="bg-purple-50 p-6 rounded-xl shadow-lg card-hover transition-all duration-300">
                     <div class="flex items-start">
-                        <div class="bg-secondary p-3 rounded-lg mr-4">
-                            <i class="fas fa-graduation-cap text-white text-xl"></i>
+                        <div class="bg-secondary p-2 md:p-3 rounded-lg mr-4 flex-shrink-0">
+                            <i class="fas fa-graduation-cap text-white text-lg md:text-xl"></i>
                         </div>
                         <div>
-                            <h4 class="text-xl font-bold mb-2">Education</h4>
+                            <h4 class="text-lg md:text-xl font-bold mb-2">Education</h4>
                             <div class="space-y-4">
                                 <div>
                                     <p class="font-semibold text-purple-700">Karatina University</p>
@@ -172,11 +174,11 @@
                 <!-- Experience Card -->
                 <div class="bg-blue-50 p-6 rounded-xl shadow-lg card-hover transition-all duration-300">
                     <div class="flex items-start">
-                        <div class="bg-accent p-3 rounded-lg mr-4">
-                            <i class="fas fa-briefcase text-white text-xl"></i>
+                        <div class="bg-accent p-2 md:p-3 rounded-lg mr-4 flex-shrink-0">
+                            <i class="fas fa-briefcase text-white text-lg md:text-xl"></i>
                         </div>
                         <div>
-                            <h4 class="text-xl font-bold mb-2">Experience</h4>
+                            <h4 class="text-lg md:text-xl font-bold mb-2">Experience</h4>
                             <div class="space-y-4">
                                 <div>
                                     <p class="font-semibold text-teal-700">Freelance Mobile Developer</p>
@@ -196,14 +198,14 @@
                <!-- Skills Card -->
                 <div class="bg-teal-50 p-6 rounded-xl shadow-lg card-hover transition-all duration-300">
                     <div class="flex items-start">
-                        <div class="bg-primary p-3 rounded-lg mr-4">
-                            <i class="fas fa-code text-white text-xl"></i>
+                        <div class="bg-primary p-2 md:p-3 rounded-lg mr-4 flex-shrink-0">
+                            <i class="fas fa-code text-white text-lg md:text-xl"></i>
                         </div>
-                        <div>
-                            <h4 class="text-xl font-bold mb-2">Skills</h4>
-                            <div class="flex flex-wrap gap-4">
+                        <div class="w-full">
+                            <h4 class="text-lg md:text-xl font-bold mb-3">Skills</h4>
+                            <div class="flex flex-wrap gap-3 md:gap-4 skill-circles justify-start">
                                 <!-- Flutter (90%) -->
-                                <div class="relative w-24 h-24">
+                                <div class="relative w-20 h-20 md:w-24 md:h-24">
                                     <svg class="w-full h-full -rotate-90" viewBox="0 0 100 100">
                                         <!-- Background circle -->
                                         <circle class="text-gray-300" stroke="currentColor" stroke-width="10" fill="none" cx="50" cy="50" r="45" />
@@ -212,51 +214,40 @@
                                                 cx="50" cy="50" r="45" stroke-dasharray="282.743" stroke-dashoffset="282.743" data-target="90" />
                                     </svg>
                                     <div class="absolute inset-0 flex items-center justify-center">
-                                        <span class="text-sm font-bold">Flutter</span>
+                                        <span class="text-xs md:text-sm font-bold">Flutter</span>
                                     </div>
                                 </div>
                                 <!-- Dart (85%) -->
-                                <div class="relative w-24 h-24">
+                                <div class="relative w-20 h-20 md:w-24 md:h-24">
                                     <svg class="w-full h-full -rotate-90" viewBox="0 0 100 100">
                                         <circle class="text-gray-300" stroke="currentColor" stroke-width="10" fill="none" cx="50" cy="50" r="45" />
                                         <circle class="text-secondary progress progress-circle" stroke="currentColor" stroke-width="10" fill="none"
                                                 cx="50" cy="50" r="45" stroke-dasharray="282.743" stroke-dashoffset="282.743" data-target="85" />
                                     </svg>
                                     <div class="absolute inset-0 flex items-center justify-center">
-                                        <span class="text-sm font-bold">Dart</span>
+                                        <span class="text-xs md:text-sm font-bold">Dart</span>
                                     </div>
                                 </div>
                                 <!-- Firebase (80%) -->
-                                <div class="relative w-24 h-24">
+                                <div class="relative w-20 h-20 md:w-24 md:h-24">
                                     <svg class="w-full h-full -rotate-90" viewBox="0 0 100 100">
                                         <circle class="text-gray-300" stroke="currentColor" stroke-width="10" fill="none" cx="50" cy="50" r="45" />
                                         <circle class="text-yellow-500 progress progress-circle" stroke="currentColor" stroke-width="10" fill="none"
                                                 cx="50" cy="50" r="45" stroke-dasharray="282.743" stroke-dashoffset="282.743" data-target="80" />
                                     </svg>
                                     <div class="absolute inset-0 flex items-center justify-center">
-                                        <span class="text-sm font-bold">Firebase</span>
+                                        <span class="text-xs md:text-sm font-bold">Firebase</span>
                                     </div>
                                 </div>
                                 <!-- UI/UX (85%) -->
-                                <div class="relative w-24 h-24">
+                                <div class="relative w-20 h-20 md:w-24 md:h-24">
                                     <svg class="w-full h-full -rotate-90" viewBox="0 0 100 100">
                                         <circle class="text-gray-300" stroke="currentColor" stroke-width="10" fill="none" cx="50" cy="50" r="45" />
                                         <circle class="text-accent progress progress-circle" stroke="currentColor" stroke-width="10" fill="none"
                                                 cx="50" cy="50" r="45" stroke-dasharray="282.743" stroke-dashoffset="282.743" data-target="85" />
                                     </svg>
                                     <div class="absolute inset-0 flex items-center justify-center">
-                                        <span class="text-sm font-bold">UI/UX</span>
-                                    </div>
-                                </div>
-                                <!-- REST API (75%) -->
-                                <div class="relative w-24 h-24">
-                                    <svg class="w-full h-full -rotate-90" viewBox="0 0 100 100">
-                                        <circle class="text-gray-300" stroke="currentColor" stroke-width="10" fill="none" cx="50" cy="50" r="45" />
-                                        <circle class="text-primary progress progress-circle" stroke="currentColor" stroke-width="10" fill="none"
-                                                cx="50" cy="50" r="45" stroke-dasharray="282.743" stroke-dashoffset="282.743" data-target="75" />
-                                    </svg>
-                                    <div class="absolute inset-0 flex items-center justify-center">
-                                        <span class="text-sm font-bold">REST API</span>
+                                        <span class="text-xs md:text-sm font-bold">UI/UX</span>
                                     </div>
                                 </div>
                             </div>
@@ -271,46 +262,46 @@
 <!-- What I Do Section -->
 <section id="what-i-do" class="py-16 bg-gradient-to-r from-pink-50 to-purple-50 transition-colors duration-300">
     <div class="container mx-auto px-4">
-        <h2 class="text-5xl font-bold text-center mb-4 gradient-text">My Services</h2>
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 gradient-text">My Services</h2>
         <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Specialized solutions to bring your mobile app ideas to life</p>
         
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="p-6 bg-white rounded-lg shadow-lg card-hover transition-all duration-300 transform hover:scale-105">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div class="p-6 bg-white rounded-lg shadow-lg card-hover transition-all duration-300 transform hover:scale-105 service-item">
                 <div class="rounded-full bg-gradient-to-r from-pink-500 to-purple-500 w-16 h-16 flex items-center justify-center mb-6 mx-auto">
                     <i class="fas fa-mobile-alt text-2xl text-white"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-center">Mobile App Development</h3>
                 <p class="text-gray-600 text-center">Custom mobile applications for Android and iOS platforms using Flutter framework</p>
             </div>
-            <div class="p-6 bg-white rounded-lg shadow-lg card-hover transition-all duration-300 transform hover:scale-105">
+            <div class="p-6 bg-white rounded-lg shadow-lg card-hover transition-all duration-300 transform hover:scale-105 service-item">
                 <div class="rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 w-16 h-16 flex items-center justify-center mb-6 mx-auto">
                     <i class="fas fa-paint-brush text-2xl text-white"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-center">UI/UX Design</h3>
                 <p class="text-gray-600 text-center">Intuitive, responsive, and aesthetically pleasing user interfaces for mobile applications</p>
             </div>
-            <div class="p-6 bg-white rounded-lg shadow-lg card-hover transition-all duration-300 transform hover:scale-105">
+            <div class="p-6 bg-white rounded-lg shadow-lg card-hover transition-all duration-300 transform hover:scale-105 service-item">
                 <div class="rounded-full bg-gradient-to-r from-indigo-500 to-teal-500 w-16 h-16 flex items-center justify-center mb-6 mx-auto">
                     <i class="fas fa-database text-2xl text-white"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-center">API Integration</h3>
                 <p class="text-gray-600 text-center">Seamless connection of mobile apps with backend services and third-party APIs</p>
             </div>
-            <div class="p-6 bg-white rounded-lg shadow-lg card-hover transition-all duration-300 transform hover:scale-105">
+            <div class="p-6 bg-white rounded-lg shadow-lg card-hover transition-all duration-300 transform hover:scale-105 service-item">
                 <div class="rounded-full bg-gradient-to-r from-teal-500 to-yellow-500 w-16 h-16 flex items-center justify-center mb-6 mx-auto">
                     <i class="fas fa-code-branch text-2xl text-white"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-center">App Maintenance</h3>
                 <p class="text-gray-600 text-center">Ongoing support, updates, and performance optimizations for existing applications</p>
             </div>
-            <div class="p-6 bg-white rounded-lg shadow-lg card-hover transition-all duration-300 transform hover:scale-105">
+            <div class="p-6 bg-white rounded-lg shadow-lg card-hover transition-all duration-300 transform hover:scale-105 service-item">
                 <div class="rounded-full bg-gradient-to-r from-yellow-500 to-red-500 w-16 h-16 flex items-center justify-center mb-6 mx-auto">
                     <i class="fas fa-store text-2xl text-white"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-center">App Store Deployment</h3>
                 <p class="text-gray-600 text-center">Complete setup and deployment of apps to Google Play Store and Apple App Store</p>
             </div>
-            <div class="p-6 bg-white rounded-lg shadow-lg card-hover transition-all duration-300 transform hover:scale-105">
+            <div class="p-6 bg-white rounded-lg shadow-lg card-hover transition-all duration-300 transform hover:scale-105 service-item">
                 <div class="rounded-full bg-gradient-to-r from-red-500 to-pink-500 w-16 h-16 flex items-center justify-center mb-6 mx-auto">
                     <i class="fas fa-graduation-cap text-2xl text-white"></i>
                 </div>
@@ -321,18 +312,18 @@
     </div>
 </section>
 
-<!-- Portfolio Section -->
-<section id="portfolio" class="py-16 bg-white transition-colors duration-300">
+<!-- My Work Section (Code Examples) -->
+<section id="my-work" class="py-16 bg-white transition-colors duration-300">
     <div class="container mx-auto px-4">
-        <h2 class="text-5xl font-bold text-center mb-4 gradient-text">My Projects</h2>
-        <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">A showcase of my mobile development work and expertise</p>
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 gradient-text">My Work</h2>
+        <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Some examples of my Flutter development expertise</p>
         
         <div class="grid md:grid-cols-2 gap-8">
             <!-- Project 1 -->
             <div class="bg-gradient-to-r from-pink-50 to-purple-50 rounded-xl shadow-lg overflow-hidden card-hover transition-all duration-300">
-                <div class="relative group h-[300px]">
+                <div class="relative group h-[250px] sm:h-[300px]">
                     <div class="absolute inset-0 flex items-center justify-center bg-gray-800 text-white">
-                        <div class="code-snippet p-6 w-full h-full overflow-hidden">
+                        <div class="code-snippet p-4 sm:p-6 w-full h-full overflow-hidden">
                             <pre class="text-xs md:text-sm">
 import 'package:flutter/material.dart';
 
@@ -383,8 +374,8 @@ class ProductListScreen extends StatelessWidget {
                     <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-6">
                         <div class="text-white text-center">
                             <h3 class="text-xl font-bold mb-2">E-Commerce Mobile App</h3>
-                            <p class="mb-4">A full-featured online shopping application with cart, payments, and order tracking</p>
-                            <button class="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white px-6 py-2 rounded-full transform hover:scale-105 transition-all duration-300">
+                            <p class="mb-4 text-sm sm:text-base">A full-featured online shopping application with cart, payments, and order tracking</p>
+                            <button class="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white px-4 py-2 rounded-full transform hover:scale-105 transition-all duration-300 text-sm">
                                 View Details
                             </button>
                         </div>
@@ -405,9 +396,9 @@ class ProductListScreen extends StatelessWidget {
 
             <!-- Project 2 -->
             <div class="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl shadow-lg overflow-hidden card-hover transition-all duration-300">
-                <div class="relative group h-[300px]">
+                <div class="relative group h-[250px] sm:h-[300px]">
                     <div class="absolute inset-0 flex items-center justify-center bg-gray-800 text-white">
-                        <div class="code-snippet p-6 w-full h-full overflow-hidden">
+                        <div class="code-snippet p-4 sm:p-6 w-full h-full overflow-hidden">
                             <pre class="text-xs md:text-sm">
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -481,8 +472,8 @@ class _ChatHomeScreenState extends State<ChatHomeScreen> {
                     <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-6">
                         <div class="text-white text-center">
                             <h3 class="text-xl font-bold mb-2">Messaging App</h3>
-                            <p class="mb-4">Real-time chat application with group messaging and media sharing</p>
-                            <button class="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-6 py-2 rounded-full transform hover:scale-105 transition-all duration-300">
+                            <p class="mb-4 text-sm sm:text-base">Real-time chat application with group messaging and media sharing</p>
+                            <button class="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-4 py-2 rounded-full transform hover:scale-105 transition-all duration-300 text-sm">
                                 View Details
                             </button>
                         </div>
@@ -504,20 +495,90 @@ class _ChatHomeScreenState extends State<ChatHomeScreen> {
     </div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="py-16 bg-gradient-to-r from-pink-50 to-purple-50 transition-colors duration-300">
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-16 bg-gradient-to-r from-pink-50 to-purple-50 transition-colors duration-300">
     <div class="container mx-auto px-4">
-        <h2 class="text-5xl font-bold text-center mb-4 gradient-text">Contact Me</h2>
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 gradient-text">App Portfolio</h2>
+        <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">A showcase of mobile applications I've developed</p>
+        
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- App 1 -->
+            <div class="portfolio-item animate-fade-in">
+                <img src="https://picsum.photos/id/3/600/600" alt="E-commerce App" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h3 class="text-white text-xl font-bold mb-2">ShopEase</h3>
+                    <p class="text-white text-sm mb-4 text-center">A full-featured e-commerce app with cart, wishlist, and secure payments</p>
+                    <a href="#" class="inline-block bg-white text-primary hover:bg-pink-100 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300">View Project</a>
+                </div>
+            </div>
+            
+            <!-- App 2 -->
+            <div class="portfolio-item animate-fade-in" style="animation-delay: 0.2s">
+                <img src="https://picsum.photos/id/160/600/600" alt="Fitness Tracker" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h3 class="text-white text-xl font-bold mb-2">FitTrack Pro</h3>
+                    <p class="text-white text-sm mb-4 text-center">A fitness tracking app with workout plans, progress tracking, and nutrition advice</p>
+                    <a href="#" class="inline-block bg-white text-primary hover:bg-pink-100 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300">View Project</a>
+                </div>
+            </div>
+            
+            <!-- App 3 -->
+            <div class="portfolio-item animate-fade-in" style="animation-delay: 0.4s">
+                <img src="https://picsum.photos/id/119/600/600" alt="Weather App" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h3 class="text-white text-xl font-bold mb-2">WeatherNow</h3>
+                    <p class="text-white text-sm mb-4 text-center">A weather forecasting app with real-time updates, location tracking, and alerts</p>
+                    <a href="#" class="inline-block bg-white text-primary hover:bg-pink-100 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300">View Project</a>
+                </div>
+            </div>
+            
+            <!-- App 4 -->
+            <div class="portfolio-item animate-fade-in" style="animation-delay: 0.2s">
+                <img src="https://picsum.photos/id/225/600/600" alt="Recipe App" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h3 class="text-white text-xl font-bold mb-2">RecipeMaster</h3>
+                    <p class="text-white text-sm mb-4 text-center">A recipe app with search functionality, favorites, and step-by-step cooking instructions</p>
+                    <a href="#" class="inline-block bg-white text-primary hover:bg-pink-100 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300">View Project</a>
+                </div>
+            </div>
+            
+            <!-- App 5 -->
+            <div class="portfolio-item animate-fade-in" style="animation-delay: 0.4s">
+                <img src="https://picsum.photos/id/447/600/600" alt="Task Manager" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h3 class="text-white text-xl font-bold mb-2">TaskFlow</h3>
+                    <p class="text-white text-sm mb-4 text-center">A productivity app for managing tasks, setting reminders, and tracking goals</p>
+                    <a href="#" class="inline-block bg-white text-primary hover:bg-pink-100 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300">View Project</a>
+                </div>
+            </div>
+            
+            <!-- App 6 -->
+            <div class="portfolio-item animate-fade-in" style="animation-delay: 0.6s">
+                <img src="https://picsum.photos/id/370/600/600" alt="Music Player" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h3 class="text-white text-xl font-bold mb-2">MeloBeats</h3>
+                    <p class="text-white text-sm mb-4 text-center">A music player with playlist creation, equalizer, and offline listening modes</p>
+                    <a href="#" class="inline-block bg-white text-primary hover:bg-pink-100 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-16 bg-white transition-colors duration-300">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 gradient-text">Contact Me</h2>
         <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Let's work together to bring your mobile app ideas to life</p>
         
         <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <!-- Contact Info -->
-            <div class="bg-white p-8 rounded-xl shadow-lg card-hover transition-all duration-300">
-                <h3 class="text-2xl font-bold text-primary mb-6">Get In Touch</h3>
+            <div class="bg-gradient-to-r from-pink-50 to-purple-50 p-6 sm:p-8 rounded-xl shadow-lg card-hover transition-all duration-300">
+                <h3 class="text-xl md:text-2xl font-bold text-primary mb-6">Get In Touch</h3>
                 
                 <div class="space-y-4">
                     <div class="flex items-start transform transition-transform duration-300 hover:translate-x-2">
-                        <div class="rounded-full bg-gradient-to-r from-pink-500 to-purple-500 p-3 mr-4">
+                        <div class="rounded-full bg-gradient-to-r from-pink-500 to-purple-500 p-3 mr-4 flex-shrink-0">
                             <i class="fas fa-map-marker-alt text-white"></i>
                         </div>
                         <div>
@@ -527,7 +588,7 @@ class _ChatHomeScreenState extends State<ChatHomeScreen> {
                     </div>
                     
                     <div class="flex items-start transform transition-transform duration-300 hover:translate-x-2">
-                        <div class="rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 p-3 mr-4">
+                        <div class="rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 p-3 mr-4 flex-shrink-0">
                             <i class="fas fa-envelope text-white"></i>
                         </div>
                         <div>
@@ -537,7 +598,7 @@ class _ChatHomeScreenState extends State<ChatHomeScreen> {
                     </div>
                     
                     <div class="flex items-start transform transition-transform duration-300 hover:translate-x-2">
-                        <div class="rounded-full bg-gradient-to-r from-indigo-500 to-teal-500 p-3 mr-4">
+                        <div class="rounded-full bg-gradient-to-r from-indigo-500 to-teal-500 p-3 mr-4 flex-shrink-0">
                             <i class="fas fa-phone text-white"></i>
                         </div>
                         <div>
@@ -550,7 +611,7 @@ class _ChatHomeScreenState extends State<ChatHomeScreen> {
                 <!-- Social Links -->
                 <div class="mt-8">
                     <h4 class="font-bold mb-4">Follow Me</h4>
-                    <div class="flex space-x-4">
+                    <div class="flex flex-wrap gap-4">
                         <a href="#" class="rounded-full bg-gradient-to-r from-blue-400 to-blue-600 p-3 text-white transform transition-all duration-300 hover:scale-110 hover:rotate-6">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
@@ -568,8 +629,8 @@ class _ChatHomeScreenState extends State<ChatHomeScreen> {
             </div>
             
             <!-- Contact Form -->
-            <div class="bg-white p-8 rounded-xl shadow-lg card-hover transition-all duration-300">
-                <h3 class="text-2xl font-bold text-primary mb-6">Send Me a Message</h3>
+            <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg card-hover transition-all duration-300 border border-gray-100">
+                <h3 class="text-xl md:text-2xl font-bold text-primary mb-6">Send Me a Message</h3>
                 
                 <form id="contact-form" action="https://formsubmit.co/your-form-id" method="POST">
                     <div class="mb-4 transform transition-all duration-300 hover:translate-y-[-5px]">
@@ -605,21 +666,21 @@ class _ChatHomeScreenState extends State<ChatHomeScreen> {
 <footer class="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-8">
     <div class="container mx-auto px-4 text-center space-y-4">
         <!-- Social Links -->
-        <div class="flex justify-center space-x-6">
+        <div class="flex justify-center flex-wrap gap-4 md:gap-6">
             <a href="#" class="hover:text-pink-200 transition-all duration-300 transform hover:scale-125">
-                <i class="fab fa-linkedin-in text-2xl"></i>
+                <i class="fab fa-linkedin-in text-xl md:text-2xl"></i>
             </a>
             <a href="#" class="hover:text-pink-200 transition-all duration-300 transform hover:scale-125">
-                <i class="fab fa-twitter text-2xl"></i>
+                <i class="fab fa-twitter text-xl md:text-2xl"></i>
             </a>
             <a href="#" class="hover:text-pink-200 transition-all duration-300 transform hover:scale-125">
-                <i class="fab fa-github text-2xl"></i>
+                <i class="fab fa-github text-xl md:text-2xl"></i>
             </a>
             <a href="#" class="hover:text-pink-200 transition-all duration-300 transform hover:scale-125">
-                <i class="fab fa-instagram text-2xl"></i>
+                <i class="fab fa-instagram text-xl md:text-2xl"></i>
             </a>
             <a href="mailto:annd0273@gmail.com" class="hover:text-pink-200 transition-all duration-300 transform hover:scale-125">
-                <i class="fas fa-envelope text-2xl"></i>
+                <i class="fas fa-envelope text-xl md:text-2xl"></i>
             </a>
         </div>
         
@@ -631,12 +692,12 @@ class _ChatHomeScreenState extends State<ChatHomeScreen> {
         <!-- Credit -->
         <div>
             <p>
-                Developed by <a href="https://wa.me/254788419041?text=Hello%20👋,%20I'm%20interested%20in%20your%20web%20development%20and%20graphic%20design%20services.%20Kindly%20share%20more%20details." target="_blank" style="text-decoration: none; color: #25D366;">
-                    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" style="vertical-align: middle;"/>
-                    Chat with us on WhatsApp
-                  </a>
-                  
+                Developed by 
                 <span class="font-bold gradient-text">KINGS CREATION</span>
+                <a href="https://wa.me/254788419041?text=Hello%20👋,%20I'm%20interested%20in%20your%20web%20development%20and%20graphic%20design%20services.%20Kindly%20share%20more%20details." target="_blank" style="text-decoration: none; color: #25D366;">
+                    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" style="vertical-align: middle;"/>
+                    Chat with Kings
+                  </a>
             </p>
         </div>
     </div>
