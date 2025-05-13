@@ -86,7 +86,7 @@
 .animate-fade-in { animation: fadeIn 1s ease-in; }
 .animate-slide-left { animation: slideInFromLeft 1s ease-out; }
 .animate-slide-right { animation: slideInFromRight 1s ease-out; }
-.animate-slide-up { animation: slideInFromBottom 1s ease-out; }
+.animate-slide-up { animation: slideInFromBottom 1s ease-out; }ss
 .animate-float { animation: floatAnimation 6s ease-in-out infinite; }
 .animate-glow { animation: glowEffect 3s infinite; }
 .animate-bounce-slow { animation: bounce 5s ease-in-out infinite; }
@@ -94,6 +94,7 @@
 .gradient-text {
     background: linear-gradient(90deg, #FF6B8A, #8A4FFF, #00D9C0);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 200% auto;
     animation: gradientBG 3s ease infinite;
